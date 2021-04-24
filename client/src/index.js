@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 // keeps track of store to allow access state from anywhere
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'react-redux';
+import thunk from 'redux-thunk';
 
 import reducers from './reducers';
 

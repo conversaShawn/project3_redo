@@ -1,5 +1,4 @@
 import express from "express";
-import bodyParser from "body-parser";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv"
@@ -9,16 +8,16 @@ import postRoutes from "./routes/activities.js"
 const app = express();
 
 // PARSE REGISTERED MIDDLEWARE
-app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
-
-// GET ALL ROUTES
-app.use("/posts", postRoutes)
-
-// PARSE HTTP REQUEST FROM JSON STRING
-app.use(bodyParser.json({limit: "30mb", extended: true}));
+app.use(express.urlencoded({limit: "30mb", extended: true}));
 
 // PARSE CORS REQUESTS
 app.use(cors());
+
+// GET ALL ROUTES
+app.use("/activities", postRoutes)
+
+// PARSE HTTP REQUEST FROM JSON STRING
+app.use(express.json({limit: "30mb", extended: true}));
 
 // GRAB DB KEYS
 dotenv.config()

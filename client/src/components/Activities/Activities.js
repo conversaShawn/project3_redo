@@ -1,10 +1,14 @@
 import React from "react";
-import Activity from "./Activity/Activity";
+import { useSelector } from "react-redux"
 
+import Activity from "./Activity/Activity";
 import useStyles from "./styles"
 
 const Activities = () => {
+    const activities = useSelector((state) => state.activities);
     const classes = useStyles();
+
+    console.log(activities);
     return (
         <>
             <h1>ACTIVITIES</h1>

@@ -16,6 +16,6 @@ const postSchema = mongoose.Schema({
     },
 });
 
-const PostActivity = mongoose.model("PostActvity", postSchema);
+const PostActivity = mongoose.model("PostActivity", postSchema);
 
 export default PostActivity;
