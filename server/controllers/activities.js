@@ -9,7 +9,7 @@ export const getAllActivities = async (req, res) => {
     }
 };
 
-export const createActivities = async (req, res) => {
+export const createActivity = async (req, res) => {
     const activity = req.body;
     const newActivity = new PostActivity(activity);
     try {

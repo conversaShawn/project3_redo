@@ -3,6 +3,7 @@
     "cypress": "^7.0.1"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "react-file-base64": "^1.0.3"
   }
 }

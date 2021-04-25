@@ -10,3 +10,14 @@ export const getActivities = () => async (dispatch) => {
         console.log("error:", error.message)
     }
 }
+
+export const createActivity = (post) => async (dispatch) => {
+    try {
+        const { data } = await api.createActivity(post);
+
+        dispatch({ type: "CREATE", payload: data })
+    } catch (error) {
+        console.log("error:", error.message)
+    }
+}
+
