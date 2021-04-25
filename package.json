@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "cypress": "^7.0.1"
+  },
+  "dependencies": {
+    "react-file-base64": "^1.0.3"
   }
 }
