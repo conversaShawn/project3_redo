@@ -11,11 +11,11 @@ export const getActivities = () => async (dispatch) => {
     }
 }
 
-export const createActivity = (post) => async (dispatch) => {
+export const createActivity = (activity) => async (dispatch) => {
     try {
-        const { data } = await api.createActivity(post);
+        const { data } = await api.createActivity(activity);
 
-        dispatch({ type: "CREATE", payload: data })
+        dispatch({ type: "CREATE", payload: data });
     } catch (error) {
         console.log("error:", error.message)
     }
