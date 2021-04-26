@@ -17,11 +17,11 @@ const Form = () => {
     const classes = useStyles();
     const dispatch = useDispatch();
     
-    console.log(activityData)
+    // console.log(activityData)
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        // dispatch(postFunction(state))
         dispatch(createActivity(activityData))
     }
 

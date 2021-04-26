@@ -7,6 +7,9 @@ import activitiesRoutes from "./routes/activities.js"
 
 const app = express();
 
+// PARSE HTTP REQUEST FROM JSON STRING
+app.use(express.json({limit: "30mb", extended: true}));
+
 // PARSE REGISTERED MIDDLEWARE
 app.use(express.urlencoded({limit: "30mb", extended: true}));
 
@@ -16,12 +19,8 @@ app.use(cors());
 // GET ALL ROUTES
 app.use("/activities", activitiesRoutes)
 
-// PARSE HTTP REQUEST FROM JSON STRING
-app.use(express.json({limit: "30mb", extended: true}));
-
 // GRAB DB KEYS
 dotenv.config()
-// console.log(process.env)
 const CONNECTION_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.hbh5c.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 // PORT NUMBER
