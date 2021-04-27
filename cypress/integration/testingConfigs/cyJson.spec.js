@@ -1,5 +1,7 @@
-describe('My First Test', () => {
-    it('Does not do much!', () => {
-      expect(true).to.equal(true)
+/// <reference types="cypress" />
+
+describe('Testing config', () => {
+    it('tests local host', () => {
+      cy.visit("/")
     })
   })
