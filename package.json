@@ -1,16 +1,16 @@
 {
   "devDependencies": {
-    "cypress": "^7.2.0",
     "fs-extra": "^9.1.0"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "cypress": "^7.2.0",
     "react-file-base64": "^1.0.3"
   },
   "scripts": {
     "cy:open": "cypress open",
     "cy:client": "cypress open --env fileConfig=client",
-    "cy:fullStack": "cypress open --env fileConfig=fullStack",
+    "cy:deployed": "cypress open --env fileConfig=deployed",
     "cy:server": "cypress open --env fileConfig=server"
   }
 }

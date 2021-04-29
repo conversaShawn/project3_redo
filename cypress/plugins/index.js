@@ -12,8 +12,8 @@ function getConfigurationByFile (file) {
 
 // plugins file
 module.exports = (on, config) => {
-    // accept a configFile value or use local by default
-    const file = config.env.configFile || 'client';
+    // accept a configFile value or use fullStack by default
+    const file = config.env.configFile || 'fullStack';
 
     return getConfigurationByFile(file)
 };
