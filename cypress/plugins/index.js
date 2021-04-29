@@ -13,7 +13,7 @@ function getConfigurationByFile (file) {
 // plugins file
 module.exports = (on, config) => {
     // accept a configFile value or use fullStack by default
-    const file = config.env.configFile || 'fullStack';
+    const file = config.env.configFile || 'deployed';
 
     return getConfigurationByFile(file)
 };
