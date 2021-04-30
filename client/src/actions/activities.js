@@ -7,7 +7,7 @@ export const getActivities = () => async (dispatch) => {
 
 		dispatch({ type: 'FETCH_ALL', payload: data });
 	} catch (error) {
-		console.log('error:', error.message);
+		console.log('error:', error);
 	}
 };
 
@@ -17,6 +17,16 @@ export const createActivity = (activity) => async (dispatch) => {
 
 		dispatch({ type: 'CREATE', payload: data });
 	} catch (error) {
-		console.log('error:', error.message);
+		console.log('error:', error);
+	}
+};
+
+export const updateActivity = (id, activity) => async (dispatch) => {
+	try {
+		const { data } = await api.updateActivity(id, activity);
+
+		dispatch({ type: 'UPDATE', payload: data });
+	} catch (error) {
+		console.log('error:', error);
 	}
 };

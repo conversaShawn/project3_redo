@@ -1,28 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { TextField, Button, Typography, Paper } from "@material-ui/core"
 import FileBase from "react-file-base64";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import useStyles from "./styles"
-import { createActivity } from "../../actions/activities";
+import { updateActivity, createActivity } from "../../actions/activities";
 
-const Form = () => {
+const Form = ({ currentId, setCurrentId}) => {
     const [activityData, setActivityData] = useState({
         creator: "",
         title: "",
         message: "",
         tags: "",
         selectedFile: ""
-    })
+    });
+    const activity = useSelector((state) => currentId ? state.activities.find((a) => a._id === currentId) : null);
     const classes = useStyles();
     const dispatch = useDispatch();
     
     // console.log(activityData)
+    useEffect(() => {
+        if (activity) setActivityData(activity)
+    }, [activity])
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // dispatch(postFunction(state))
-        dispatch(createActivity(activityData))
+
+        if(currentId) {
+            dispatch(updateActivity(currentId, activityData))
+        } else {
+            dispatch(createActivity(activityData))
+        }
     }
 
     const clear = () => {

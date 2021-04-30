@@ -5,7 +5,7 @@ import { useSelector } from "react-redux"
 import Activity from "./Activity/Activity";
 import useStyles from "./styles"
 
-const Activities = () => {
+const Activities = ({ setCurrentId }) => {
     const activities = useSelector((state) => state.activities);
     const classes = useStyles();
 
@@ -15,7 +15,7 @@ const Activities = () => {
             <Grid className={classes.container} container alignItems="stretch" spacing={3}>
                 {activities.map((activities) => (
                     <Grid key={activities._id} item xs={12} sm={6}>
-                        <Activity activities={activities}/>
+                        <Activity activities={activities} setCurrentId={setCurrentId} />
                     </Grid>
                 ))}
             </Grid>

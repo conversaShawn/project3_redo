@@ -1,10 +1,11 @@
 import express from "express";
 
-import {getActivities, createActivity} from "../controllers/activities.js"
+import {getActivities, createActivity, updateActivity} from "../controllers/activities.js"
 
 const router = express.Router();
 
-router.get("/", getActivities)
-router.post("/", createActivity)
+router.get("/", getActivities);
+router.post("/", createActivity);
+router.patch("/:id", updateActivity)
 
 export default router;
