@@ -40,7 +40,7 @@ const Form = ({ currentId, setCurrentId}) => {
     return (
         <Paper className={classes.paper}>
             <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-                <Typography variant="h6">Creating an Activity</Typography> 
+                <Typography variant="h6">{currentId ? 'Editing' : 'Creating'} an Activity</Typography> 
                 <TextField name="creator" variant="outlined" label="Creator" fullWidth value={activityData.creator} onChange={(e) => setActivityData({ ...activityData, creator: e.target.value})}/>
                 <TextField name="title" variant="outlined" label="Title" fullWidth value={activityData.title} onChange={(e) => setActivityData({ ...activityData, title: e.target.value})}/>
                 <TextField name="message" variant="outlined" label="Message" fullWidth value={activityData.message} onChange={(e) => setActivityData({ ...activityData, message: e.target.value})}/>
