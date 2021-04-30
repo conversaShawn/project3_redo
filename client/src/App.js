@@ -15,7 +15,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(getActivities());
-  }, [dispatch])
+  }, [currentId, dispatch])
 
   return (
     <Container maxidth="lg">

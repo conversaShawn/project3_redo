@@ -1,6 +1,5 @@
-// import { Mongoose } from "mongoose";
-import Activity from "../models/activities.js"
 import mongoose from 'mongoose';
+import Activity from "../models/activities.js"
 
 export const getActivities = async (req, res) => {
     try {
@@ -28,7 +27,7 @@ export const updateActivity = async (req, res) => {
 
     if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send("No post with that id");
 
-    const updatedActivity = await Activity.findByIdAndUpdate(_id, activity, {new: true});
+    const updatedActivity = await Activity.findByIdAndUpdate(_id, { ...activity, _id}, {new: true});
 
     res.json(updatedActivity);
 }
