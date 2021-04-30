@@ -34,7 +34,14 @@ const Form = ({ currentId, setCurrentId}) => {
     }
 
     const clear = () => {
-
+        setCurrentId(null);
+        setActivityData({
+            creator: "",
+            title: "",
+            message: "",
+            tags: "",
+            selectedFile: ""
+        })
     }
 
     return (
