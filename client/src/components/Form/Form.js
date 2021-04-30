@@ -31,6 +31,7 @@ const Form = ({ currentId, setCurrentId}) => {
         } else {
             dispatch(createActivity(activityData))
         }
+        clear();
     }
 
     const clear = () => {
