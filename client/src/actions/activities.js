@@ -1,6 +1,7 @@
 import * as api from '../api';
 
 // Action creators - function that returns an action
+
 // GET (FETCH_ALL)
 export const getActivities = () => async (dispatch) => {
 	try {
@@ -12,6 +13,7 @@ export const getActivities = () => async (dispatch) => {
 	}
 };
 
+// CREATE
 export const createActivity = (activity) => async (dispatch) => {
 	try {
 		const { data } = await api.createActivity(activity);

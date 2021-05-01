@@ -5,7 +5,7 @@ export default (activities = [], action) => { // state = [], action
 		case 'FETCH_ALL':
 			return action.payload; //return state
 		case 'CREATE':
-			return [ ...activities, action.payload ]; //spread,
+			return [ ...activities, action.payload ]; //spread, stored in action.payload
 		default:
 			return activities; //return state
 	}
