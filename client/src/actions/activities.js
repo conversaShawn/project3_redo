@@ -11,9 +11,10 @@ export const getActivities = () => async (dispatch) => {
 	}
 };
 
-export const createActivity = (activity) => async (dispatch) => {
+//  4
+export const createActivity = (activities) => async (dispatch) => {
 	try {
-		const { data } = await api.createActivity(activity);
+		const { data } = await api.createActivity(activities);
 
 		dispatch({ type: 'CREATE', payload: data });
 	} catch (error) {
@@ -21,9 +22,9 @@ export const createActivity = (activity) => async (dispatch) => {
 	}
 };
 
-export const updateActivity = (id, activity) => async (dispatch) => {
+export const updateActivity = (id, activities) => async (dispatch) => {
 	try {
-		const { data } = await api.updateActivity(id, activity);
+		const { data } = await api.updateActivity(id, activities);
 
 		dispatch({ type: 'UPDATE', payload: data });
 	} catch (error) {

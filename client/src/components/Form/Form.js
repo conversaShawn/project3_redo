@@ -16,6 +16,7 @@ const Form = ({ currentId, setCurrentId}) => {
     });
     const activity = useSelector((state) => currentId ? state.activities.find((a) => a._id === currentId) : null);
     const classes = useStyles();
+    // 3
     const dispatch = useDispatch();
     
     // console.log(activityData)

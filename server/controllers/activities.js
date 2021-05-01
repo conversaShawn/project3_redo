@@ -11,8 +11,8 @@ export const getActivities = async (req, res) => {
 };
 
 export const createActivity = async (req, res) => {
-    const activity = req.body;
-    const newActivity = new Activity(activity);
+    const activities = req.body;
+    const newActivity = new Activity(activities);
     try {
         await newActivity.save();
         res.status(201).json(newActivity);
@@ -23,11 +23,11 @@ export const createActivity = async (req, res) => {
 
 export const updateActivity = async (req, res) => {
     const {id: _id } = req.params;
-    const activity = req.body;
+    const activities = req.body;
 
-    if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send("No post with that id");
+    if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send("No activity with that id");
 
-    const updatedActivity = await Activity.findByIdAndUpdate(_id, { ...activity, _id}, {new: true});
+    const updatedActivity = await Activity.findByIdAndUpdate(_id, { ...activities, _id}, {new: true});
 
     res.json(updatedActivity);
 }

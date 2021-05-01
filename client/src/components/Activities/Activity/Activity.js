@@ -12,34 +12,34 @@ const Activity = ({ activities, setCurrentId }) => {
 
 	return (
 		<Card className={classes.card}>
-			<CardMedia className={classes.media} image={activities.selectedFile} title={activities.title} />
+			<CardMedia className={classes.media} image={activity.selectedFile} title={activity.title} />
 			<div className={classes.overlay}>
-				<Typography variant="h6">{activities.creator}</Typography>
-				<Typography variant="body2">{moment(activities.createdAt).fromNow()}</Typography>
+				<Typography variant="h6">{activity.creator}</Typography>
+				<Typography variant="body2">{moment(activity.createdAt).fromNow()}</Typography>
 			</div>
 			<div className={classes.overlay2}>
-				<Button style={{ color: 'white' }} size="small" onClick={() => {setCurrentId(activities._id)}}>
+				<Button style={{ color: 'white' }} size="small" onClick={() => {setCurrentId(activity._id)}}>
 					<MoreHorizIcon fontSize="default" />
 				</Button>
 			</div>
 			<div className={classes.details}>
 				<Typography variant="body2" color="textSecondary">
-					{activities.tags.map((tag) => `#${tag} `)}
+					{activity.tags.map((tag) => `#${tag} `)}
 				</Typography>
 			</div>
 				<Typography className={classes.title} variant="h5" gutterBottom>
-					{activities.title}
+					{activity.title}
 				</Typography>
 			<CardContent>
 				<Typography variant="h5" gutterBottom>
-					{activities.message}
+					{activity.message}
 				</Typography>
 			</CardContent>
 			<CardActions className={classes.CardActions}>
 				<Button size="small" color="primary" onClick={() => {}}>
 					<ThumbUpAltIcon fontSize="small" />
 					Like
-					{activities.likeCount}
+					{activity.likeCount}
 				</Button>
 				<Button size="small" color="primary" onClick={() => {}}>
 					<DeleteIcon fontSize="small" />
