@@ -10,9 +10,14 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import moment from 'moment';
 
 import useStyles from './styles';
+import { useDispatch } from "react-redux";
+
+import { deleteActivity } from "../../../actions/activities"
 
 const Activity = ({ activity, setCurrentId }) => {
 	const classes = useStyles();
+	const dispatch = useDispatch()
+
 
 	return (
 		<Card className={classes.card}>
@@ -45,7 +50,7 @@ const Activity = ({ activity, setCurrentId }) => {
 					Like
 					{activity.likeCount}
 				</Button>
-				<Button size="small" color="primary" onClick={() => {}}>
+				<Button size="small" color="primary" onClick={() => dispatch(deleteActivity(activity._id))}>
 					<DeleteIcon fontSize="small" />
 					Delete
 				</Button>

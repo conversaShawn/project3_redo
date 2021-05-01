@@ -8,3 +8,5 @@ export const fetchActivities = () => axios.get(url);
 export const createActivity = (newActivity) => axios.post(url, newActivity);
 // UPDATE
 export const updateActivity =(id, updatedActivity) => axios.patch(`${url}/${id}`, updatedActivity);
+// DELETE
+export const deleteActivity =(id) => axios.delete(`${url}/${id}`);
