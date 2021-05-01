@@ -6,10 +6,10 @@ import Activity from "./Activity/Activity";
 import useStyles from "./styles"
 
 const Activities = ({ setCurrentId }) => {
-    const activities = useSelector((state) => state.activities);
+    const activities = useSelector((state) => state.activities); //activities in reducers
     const classes = useStyles();
 
-    console.log(activities);
+    // console.log(activities);
     return (
         !activities.length ? <CircularProgress /> : (
             <Grid className={classes.container} container alignItems="stretch" spacing={3}>

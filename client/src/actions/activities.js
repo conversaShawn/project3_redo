@@ -1,6 +1,7 @@
 import * as api from '../api';
 
-// Action creators
+// Action creators - function that returns an action
+// GET (FETCH_ALL)
 export const getActivities = () => async (dispatch) => {
 	try {
 		const { data } = await api.fetchActivities();
