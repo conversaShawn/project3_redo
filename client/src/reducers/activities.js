@@ -1,5 +1,5 @@
-export default (activities = [], action) => { // state = []
-	switch (action.type) {
+export default (activities = [], action) => { // state = [], action
+	switch (action.type) { //action.type === CRUD
 		case 'UPDATE':
 			return activities.map((activities) => activities._id === action.payload ? action.payload : activities); //spread,
 		case 'FETCH_ALL':

@@ -11,8 +11,10 @@ import useStyles from "./styles"
 const App = () => {
   const [currentId, setCurrentId] = useState(null);
   const classes = useStyles();
+  // dispactches action
   const dispatch = useDispatch();
 
+  // componentDidMount/ componentDidUpdate
   useEffect(() => {
     dispatch(getActivities());
   }, [currentId, dispatch])

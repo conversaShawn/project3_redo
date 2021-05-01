@@ -10,6 +10,7 @@ import reducers from './reducers';
 import App from './App';
 import "./index.css"
 
+// store allows App to be wrapped by Provider (redux)
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 ReactDOM.render(
