@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import useStyles from "./styles"
 import { updateActivity, createActivity } from "../../actions/activities";
 
-const Form = ({ currentId, setCurrentId}) => {
+const Form = ({ currentId, setCurrentId} ) => {
     const [activityData, setActivityData] = useState({
         creator: "",
         title: "",
@@ -22,7 +22,7 @@ const Form = ({ currentId, setCurrentId}) => {
     
     // console.log(activityData)
     useEffect(() => {
-        if (activity) setActivityData(activity)
+        if (activity) setActivityData(activity);
     }, [activity])
 
     const handleSubmit = (e) => {
@@ -33,6 +33,7 @@ const Form = ({ currentId, setCurrentId}) => {
         } else {
             dispatch(createActivity(activityData))
         }
+        // clear form on submit
         clear();
     }
 
