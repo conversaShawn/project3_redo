@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { TextField, Button, Typography, Paper } from "@material-ui/core"
+// for selectedFile
 import FileBase from "react-file-base64";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -16,6 +17,7 @@ const Form = ({ currentId, setCurrentId}) => {
     });
     const activity = useSelector((state) => currentId ? state.activities.find((a) => a._id === currentId) : null);
     const classes = useStyles();
+    // allows to dispactch actions
     const dispatch = useDispatch();
     
     // console.log(activityData)
