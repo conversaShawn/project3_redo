@@ -42,7 +42,7 @@ const Activity = ({ activity, setCurrentId }) => {
 					{activity.title}
 				</Typography>
 			<CardContent>
-				<Typography variant='h6' gutterBottom>
+				<Typography variant='body2' color='textSecondary' component='p'>
 					{activity.message}
 				</Typography>
 			</CardContent>
@@ -52,7 +52,7 @@ const Activity = ({ activity, setCurrentId }) => {
 					color='primary' 
 					onClick={() => dispatch(likeActivity(activity._id))}>
 					<ThumbUpAltIcon fontSize='small' />
-					Like
+					&nbsp; Like &nbsp;
 					{activity.likeCount}
 				</Button>
         		<Button 

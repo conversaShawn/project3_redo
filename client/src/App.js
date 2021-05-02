@@ -9,7 +9,7 @@ import activityImage from './images/memories.png'
 import useStyles from './styles'
 
 const App = () => {
-  const [currentId, setCurrentId] = useState(null);
+  const [currentId, setCurrentId] = useState(0);
   const classes = useStyles();
   // dispactches action
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ const App = () => {
       </AppBar>
       <Grow in>
         <Container>
-          <Grid container justify='space-between' alignItems='stretch' spacing={3}>
+          <Grid className={classes.mainContainer} container justify='space-between' alignItems='stretch' spacing={3}>
             <Grid item xs={12} sm={7}>
               <Activities setCurrentId={setCurrentId} />
             </Grid>
