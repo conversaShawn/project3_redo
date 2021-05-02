@@ -8,9 +8,9 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 // x amount of time ago
 import moment from 'moment';
-import { useDispatch } from "react-redux"
+import { useDispatch } from 'react-redux'
 
-import { likeActivity, deleteActivity } from "../../../actions/activities"
+import { likeActivity, deleteActivity } from '../../../actions/activities'
 
 import useStyles from './styles';
 
