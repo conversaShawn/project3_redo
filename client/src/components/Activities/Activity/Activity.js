@@ -18,35 +18,44 @@ const Activity = ({ activity, setCurrentId }) => {
 		<Card className={classes.card}>
 			<CardMedia className={classes.media} image={activity.selectedFile} title={activity.title} />
 			<div className={classes.overlay}>
-				<Typography variant="h6">{activity.creator}</Typography>
-				<Typography variant="body2">{moment(activity.createdAt).fromNow()}</Typography>
+				<Typography variant='h6'>{activity.creator}</Typography>
+				<Typography variant='body2'>{moment(activity.createdAt).fromNow()}</Typography>
 			</div>
 			<div className={classes.overlay2}>
-				<Button style={{ color: 'white' }} size="small" onClick={() => {setCurrentId(activity._id)}}>
-					<MoreHorizIcon fontSize="default" />
+				<Button 
+					style={{ color: 'white' }} 
+					size='small' 
+					onClick={() => setCurrentId(activity._id)}>
+					<MoreHorizIcon fontSize='default' />
 				</Button>
 			</div>
 			<div className={classes.details}>
-				<Typography variant="body2" color="textSecondary">
+				<Typography variant='body2' color='textSecondary'>
 					{activity.tags.map((tag) => `#${tag} `)}
 				</Typography>
 			</div>
-				<Typography className={classes.title} variant="h5" gutterBottom>
+				<Typography className={classes.title} variant='h5' gutterBottom>
 					{activity.title}
 				</Typography>
 			<CardContent>
-				<Typography variant="h6" gutterBottom>
+				<Typography variant='h6' gutterBottom>
 					{activity.message}
 				</Typography>
 			</CardContent>
-			<CardActions className={classes.CardActions}>
-				<Button size="small" color="primary" onClick={() => {}}>
-					<ThumbUpAltIcon fontSize="small" />
+			<CardActions className={classes.cardActions}>
+				<Button 
+					size='small' 
+					color='primary' 
+					onClick={() => {}}>
+					<ThumbUpAltIcon fontSize='small' />
 					Like
 					{activity.likeCount}
 				</Button>
-				<Button size="small" color="primary" onClick={() => {}}>
-					<DeleteIcon fontSize="small" />
+				<Button 
+					size='small' 
+					color='primary' 
+					onClick={() => {}}>
+					<DeleteIcon fontSize='small' />
 					Delete
 				</Button>
 			</CardActions>

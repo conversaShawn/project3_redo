@@ -8,7 +8,7 @@ import thunk from 'redux-thunk';
 import reducers from './reducers';
 
 import App from './App';
-import "./index.css"
+import './index.css'
 
 // store allows App to be wrapped by Provider (redux)
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
