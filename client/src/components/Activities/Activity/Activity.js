@@ -40,7 +40,7 @@ const Activity = ({ activities, setCurrentId }) => {
 				</Typography>
 			</CardContent>
 			<CardActions className={classes.CardActions}>
-				<Button size="small" color="primary" onClick={() => dispatch(likeActivity(activities._id))}>
+				<Button size="small" color="primary" onClick={() => dispatch(likeActivity(activity._id))}>
 					<ThumbUpAltIcon fontSize="small" />
 					Like
 					{activities.likeCount}
