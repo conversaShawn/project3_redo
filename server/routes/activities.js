@@ -1,6 +1,6 @@
 import express from "express";
 
-import {getActivities, createActivity, updateActivity, likeActivity} from '../controllers/activities.js'
+import {getActivities, createActivity, updateActivity, deleteActivity, likeActivity} from '../controllers/activities.js'
 
 const router = express.Router();
 
