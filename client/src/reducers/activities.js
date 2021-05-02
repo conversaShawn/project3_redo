@@ -3,6 +3,7 @@ export default (activities = [], action) => { // state = [], action
 		case 'DELETE':
 			return activities.filter((activity) => activity._id === action.payload);
 		case 'UPDATE':
+		case 'LIKE':
 			return activities.map((activity) => activity._id === action.payload ? action.payload : activity); //spread,
 		case 'FETCH_ALL':
 			return action.payload; //return state

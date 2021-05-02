@@ -10,3 +10,5 @@ export const createActivity = (newActivity) => axios.post(url, newActivity);
 export const updateActivity =(id, updatedActivity) => axios.patch(`${url}/${id}`, updatedActivity);
 // DELETE
 export const deleteActivity =(id) => axios.delete(`${url}/${id}`);
+// LIKES
+export const likeActivity = (id) => axios.patch(`${url}/${id}/likeActivity`);

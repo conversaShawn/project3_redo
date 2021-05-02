@@ -8,6 +8,9 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 // x amount of time ago
 import moment from 'moment';
+import { useDispatch } from "react-redux"
+
+import { likeActivity } from "../../../actions/activities"
 
 import useStyles from './styles';
 import { useDispatch } from "react-redux";
@@ -16,8 +19,7 @@ import { deleteActivity } from "../../../actions/activities"
 
 const Activity = ({ activity, setCurrentId }) => {
 	const classes = useStyles();
-	const dispatch = useDispatch()
-
+	const dispatch = useDispatch();
 
 	return (
 		<Card className={classes.card}>
@@ -51,7 +53,7 @@ const Activity = ({ activity, setCurrentId }) => {
 				<Button 
 					size='small' 
 					color='primary' 
-					onClick={() => {}}>
+					onClick={() => dispatch(likeActivity(activity._id))}>
 					<ThumbUpAltIcon fontSize='small' />
 					Like
 					{activity.likeCount}
@@ -59,7 +61,7 @@ const Activity = ({ activity, setCurrentId }) => {
         <Button 
 					size='small' 
 					color='primary' 
-					onClick={() => {}}>
+					onClick={() => dispatch(deletePost(post._id))>
 					<DeleteIcon fontSize='small' />
 					Delete
 				</Button>

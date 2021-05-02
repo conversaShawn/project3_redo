@@ -36,7 +36,6 @@ export const updateActivity = async (req, res) => {
 }
 
 // DELETE
-
 export const deleteActivity = async (req, res) => {
     const { id } = req.params;
 
@@ -47,4 +46,16 @@ export const deleteActivity = async (req, res) => {
     console.log('Delete')
 
     res.json({ message: "Post deleted successfully" });
+}
+
+// LIKES
+export const likeActivity = async (req, res) => {
+    const { id } = req.params;
+
+    if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send("No activity with that id");
+
+    const activity = await Activity.findById(id);
+    const updatedActivity = await Activity.findByIdAndUpdate(id, {likeCount: activity.likeCount + 1 }, {new: true});
+
+    res.json(updatedActivity);
 }
