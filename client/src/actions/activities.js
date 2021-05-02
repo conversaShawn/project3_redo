@@ -2,7 +2,7 @@ import * as api from '../api';
 
 // Action creators - function that returns an action
 
-// GET (FETCH_ALL)
+// READ (FETCH_ALL)
 export const getActivities = () => async (dispatch) => {
 	try {
 		const { data } = await api.fetchActivities();
@@ -24,8 +24,10 @@ export const createActivity = (activity) => async (dispatch) => {
 	}
 };
 
+// UPDATE
 export const updateActivity = (id, activity) => async (dispatch) => {
 	try {
+		// response:data
 		const { data } = await api.updateActivity(id, activity);
 
 		dispatch({ type: 'UPDATE', payload: data });

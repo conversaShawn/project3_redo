@@ -1,4 +1,4 @@
-import mongoose from "mongoose"
+import mongoose from 'mongoose'
 
 const activitySchema = mongoose.Schema({
     creator: String,
@@ -16,6 +16,6 @@ const activitySchema = mongoose.Schema({
     },
 });
 
-const Activity = mongoose.model("Activity", activitySchema);
+const Activity = mongoose.model('Activity', activitySchema);
 
 export default Activity;

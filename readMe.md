@@ -7,7 +7,7 @@
     * npm run cy:deployed
     * npm run cy:server
 
-## Lone Wolf
+## Butterfly Battery
 
 More info coming soon...
 

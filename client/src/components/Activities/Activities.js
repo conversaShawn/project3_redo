@@ -1,9 +1,10 @@
-import React from "react";
-import { Grid, CircularProgress } from "@material-ui/core"
-import { useSelector } from "react-redux"
+import React from 'react';
+// Circular spinner
+import { Grid, CircularProgress } from '@material-ui/core'
+import { useSelector } from 'react-redux'
 
-import Activity from "./Activity/Activity";
-import useStyles from "./styles"
+import Activity from './Activity/Activity';
+import useStyles from './styles'
 
 const Activities = ({ setCurrentId }) => {
     const activities = useSelector((state) => state.activities); //activities in reducers
@@ -12,10 +13,10 @@ const Activities = ({ setCurrentId }) => {
     // console.log(activities);
     return (
         !activities.length ? <CircularProgress /> : (
-            <Grid className={classes.container} container alignItems="stretch" spacing={3}>
-                {activities.map((activities) => (
-                    <Grid key={activities._id} item xs={12} sm={6}>
-                        <Activity activities={activities} setCurrentId={setCurrentId} />
+            <Grid className={classes.container} container alignItems='stretch' spacing={3}>
+                {activities.map((activity) => (
+                    <Grid key={activity._id} item xs={12} sm={6}>
+                        <Activity activity={activity} setCurrentId={setCurrentId} />
                     </Grid>
                 ))}
             </Grid>
