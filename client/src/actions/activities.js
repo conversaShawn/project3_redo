@@ -27,6 +27,7 @@ export const createActivity = (activity) => async (dispatch) => {
 // UPDATE
 export const updateActivity = (id, activity) => async (dispatch) => {
 	try {
+		// response:data
 		const { data } = await api.updateActivity(id, activity);
 
 		dispatch({ type: 'UPDATE', payload: data });
