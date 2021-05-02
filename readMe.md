@@ -7,7 +7,7 @@
     * npm run cy:deployed
     * npm run cy:server
 
-## Lone Wolf
+## LONE WOLF
 
 More info coming soon...
 

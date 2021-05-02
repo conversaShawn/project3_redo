@@ -1,12 +1,14 @@
-export default (activities = [], action) => { // state = []
-	switch (action.type) {
+export default (activities = [], action) => { // state = [], action
+	switch (action.type) { //action.type === CRUD
+		case 'DELETE':
+			return activities.filter((activity) => activity._id === action.payload);
 		case 'UPDATE':
 		case 'LIKE':
-			return activities.map((activities) => activities._id === action.payload ? action.payload : activities); //spread,
+			return activities.map((activity) => activity._id === action.payload ? action.payload : activity); //spread,
 		case 'FETCH_ALL':
 			return action.payload; //return state
 		case 'CREATE':
-			return [ ...activities, action.payload ]; //spread,
+			return [ ...activities, action.payload ]; //spread, stored in action.payload
 		default:
 			return activities; //return state
 	}

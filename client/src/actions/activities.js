@@ -1,6 +1,8 @@
 import * as api from '../api';
 
-// Action creators
+// Action creators - function that returns an action
+
+// READ (FETCH_ALL)
 export const getActivities = () => async (dispatch) => {
 	try {
 		const { data } = await api.fetchActivities();
@@ -11,6 +13,7 @@ export const getActivities = () => async (dispatch) => {
 	}
 };
 
+// CREATE
 export const createActivity = (activity) => async (dispatch) => {
 	try {
 		const { data } = await api.createActivity(activity);
@@ -21,8 +24,10 @@ export const createActivity = (activity) => async (dispatch) => {
 	}
 };
 
+// UPDATE
 export const updateActivity = (id, activity) => async (dispatch) => {
 	try {
+		// response:data
 		const { data } = await api.updateActivity(id, activity);
 
 		dispatch({ type: 'UPDATE', payload: data });
@@ -31,13 +36,24 @@ export const updateActivity = (id, activity) => async (dispatch) => {
 	}
 };
 
-// likes
+// DELETE
+export const deleteActivity = (id) => async (dispatch) => {
+	try {
+		await api.deleteActivity(id);
+		
+		dispatch({ type: 'DELETE', payload: id })
+	} catch (error) {
+		console.log('error:', error);
+	}
+}
+
+// LIKES
 export const likeActivity = (id) => async (dispatch) => {
 	try {
 		const { data } = await api.likeActivity(id);
 
 		dispatch({ type: 'UPDATE', payload: data });
-	} catch (error) {
+} catch (error) {
 		console.log('error:', error);
 	}
 }
