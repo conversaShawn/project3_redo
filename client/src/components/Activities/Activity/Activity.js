@@ -4,11 +4,15 @@ import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import DeleteIcon from '@material-ui/icons/Delete';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import moment from 'moment';
+import { useDispatch } from "react-redux"
+
+import { likeActivity } from "../../../actions/activities"
 
 import useStyles from './styles';
 
 const Activity = ({ activities, setCurrentId }) => {
 	const classes = useStyles();
+	const dispatch = useDispatch();
 
 	return (
 		<Card className={classes.card}>
@@ -36,7 +40,7 @@ const Activity = ({ activities, setCurrentId }) => {
 				</Typography>
 			</CardContent>
 			<CardActions className={classes.CardActions}>
-				<Button size="small" color="primary" onClick={() => {}}>
+				<Button size="small" color="primary" onClick={() => dispatch(likeActivity(activities._id))}>
 					<ThumbUpAltIcon fontSize="small" />
 					Like
 					{activities.likeCount}

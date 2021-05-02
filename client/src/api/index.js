@@ -5,3 +5,6 @@ const url = "http://localhost:5000/activities";
 export const fetchActivities = () => axios.get(url);
 export const createActivity = (newActivity) => axios.post(url, newActivity);
 export const updateActivity =(id, updatedActivity) => axios.patch(`${url}/${id}`, updatedActivity);
+
+// likeCount
+export const likeActivity = (id) => axios.patch(`${url}/${id}/likeActivity`)

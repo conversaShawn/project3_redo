@@ -25,9 +25,20 @@ export const updateActivity = async (req, res) => {
     const {id: _id } = req.params;
     const activity = req.body;
 
-    if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send("No post with that id");
+    if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send("No activity with that id");
 
     const updatedActivity = await Activity.findByIdAndUpdate(_id, { ...activity, _id}, {new: true});
+
+    res.json(updatedActivity);
+}
+
+export const likeActivity = async (req, res) => {
+    const { id } = req.params;
+
+    if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send("No activity with that id");
+
+    const activity = await Activity.findById(id);
+    const updatedActivity = await Activity.findByIdAndUpdate(id, {likeCount: activity.likeCount + 1 }, {new: true});
 
     res.json(updatedActivity);
 }
