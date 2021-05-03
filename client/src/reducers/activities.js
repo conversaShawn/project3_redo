@@ -1,13 +1,14 @@
+import { FETCH_ALL, CREATE, UPDATE, DELETE } from '../constants/actionTypes'
+
 export default (activities = [], action) => { // state = [], action
 	switch (action.type) { //action.type === CRUD
-		case 'DELETE':
+		case DELETE:
 			return activities.filter((activity) => activity._id === action.payload);
-		case 'UPDATE':
-		case 'LIKE':
+		case UPDATE:
 			return activities.map((activity) => activity._id === action.payload ? action.payload : activity); //spread,
-		case 'FETCH_ALL':
+		case FETCH_ALL:
 			return action.payload; //return state
-		case 'CREATE':
+		case CREATE:
 			return [ ...activities, action.payload ]; //spread, stored in action.payload
 		default:
 			return activities; //return state
