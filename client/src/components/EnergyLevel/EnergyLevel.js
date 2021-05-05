@@ -4,7 +4,9 @@ export default (EnergyLevel = () => {
 	return (
 		<div>
 			{[ ...Array(5) ].map((battery) => {
-				return battery;
+				return <label>
+                    battery
+                </label>
 			})}
 		</div>
 	);
