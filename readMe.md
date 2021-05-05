@@ -7,7 +7,7 @@
     * npm run cy:deployed
     * npm run cy:server
 
-## LONE WOLF
+## BUTTERFLY BATTERY
 
 More info coming soon...
 
@@ -22,7 +22,7 @@ More info coming soon...
 - [X] Activity
 - [ ] Authentication
 - [ ] CRUD
-- [ ] Hashtags
+- [X] Hashtags
 - [ ] Journal
-- [ ] Likes
+- [X] Likes
 - [ ] Ratings
