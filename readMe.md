@@ -1,4 +1,4 @@
-# SEI23-Project3: Take 2
+# BUTTERFLY BATTERY
 
 - START FRONTEND: cd client/ - npm start
 - START BACKEND: cd server/ - npm start
@@ -6,8 +6,6 @@
     * npm run cy:client
     * npm run cy:deployed
     * npm run cy:server
-
-## BUTTERFLY BATTERY
 
 More info coming soon...
 
