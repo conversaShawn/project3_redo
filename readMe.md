@@ -10,6 +10,7 @@
 More info coming soon...
 
 ![image](./client/src/images/mern.jpeg)
+![image](./client/src/images/cypress-cover.png)
 ## Technologies Used:
 * React
 * Express
@@ -24,3 +25,4 @@ More info coming soon...
 - [ ] Journal
 - [X] Likes
 - [ ] Ratings
+- [ ] e2e Testing
