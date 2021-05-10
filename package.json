@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "cypress": "^7.2.0",
+    "debug": "^4.3.2",
     "kill-port-process": "^2.3.0",
     "react-file-base64": "^1.0.3"
   },
