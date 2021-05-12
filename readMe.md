@@ -10,7 +10,6 @@
 More info coming soon...
 
 ![image](./client/src/images/mern.jpeg)
-![image](./client/src/images/cypress-cover.png)
 ## Technologies Used:
 * React
 * Express
@@ -27,5 +26,6 @@ More info coming soon...
 - [ ] Ratings
 - [ ] e2e Testing
 
-### Cypress Tests
-[![project3_redo](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/pf122i/main&style=for-the-badge&logo=cypress)](https://dashboard.cypress.io/projects/pf122i/runs)
+![image](./client/src/images/cypress-cover.png)
+## Cypress Tests
+Click here to see my Cypress Tests! => [![project3_redo](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/pf122i/main&style=for-the-badge&logo=cypress)](https://dashboard.cypress.io/projects/pf122i/runs)
