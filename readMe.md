@@ -26,3 +26,6 @@ More info coming soon...
 - [X] Likes
 - [ ] Ratings
 - [ ] e2e Testing
+
+### Cypress Tests
+[![project3_redo](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/pf122i/main&style=for-the-badge&logo=cypress)](https://dashboard.cypress.io/projects/pf122i/runs)
