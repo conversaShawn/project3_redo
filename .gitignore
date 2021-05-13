@@ -2,7 +2,7 @@
 /node_modules
 
 # Cypress videos
-/cypress/videos/*
+/cypress/videos
 
 # misc
 .DS_Store
