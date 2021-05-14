@@ -4,5 +4,11 @@
   "retries": {
     "runMode": 2,
     "openMode": 3 
+  },
+  "env": {
+    "apiUrl": "http://localhost:13001",
+    "codeCoverage": {
+      "url": "http://localhost:13001/__coverage__"
+    }
   }
 }
