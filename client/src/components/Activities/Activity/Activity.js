@@ -10,7 +10,9 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import moment from 'moment';
 import { useDispatch } from 'react-redux'
 
-import { likeActivity, deleteActivity } from '../../../actions/activities'
+import { likeActivity, deleteActivity } from '../../../actions/activities';
+
+import EnergyLevel from '../../EnergyLevel/EnergyLevel' 
 
 import useStyles from './styles';
 
@@ -46,6 +48,7 @@ const Activity = ({ activity, setCurrentId }) => {
 					{activity.message}
 				</Typography>
 			</CardContent>
+			< EnergyLevel />
 			<CardActions className={classes.cardActions}>
 				<Button 
 					size='small' 
