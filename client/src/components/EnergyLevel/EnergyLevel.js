@@ -1,10 +1,10 @@
 import React from 'react';
-// import { FaStar } from 'react-icons/fa';
+import Rating from '@material-ui/lab/Rating'
 
 export default function EnergyLevel() {
 	return (
 		<div>
-			star
+			<Rating />
 		</div>
 	)
 }
