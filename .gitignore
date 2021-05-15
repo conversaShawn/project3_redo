@@ -1,3 +1,8 @@
+# dependencies
 /node_modules
 
+# Cypress videos
+/cypress/videos
+
+# misc
 .DS_Store

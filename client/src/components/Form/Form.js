@@ -27,7 +27,7 @@ const Form = ({ currentId, setCurrentId }) => {
     }, [activity])
 
     const clear = () => {
-        setCurrentId(null);
+        setCurrentId(0);
         setActivityData({
             creator: '',
             title: '',
@@ -55,7 +55,7 @@ const Form = ({ currentId, setCurrentId }) => {
                 <TextField name='creator' variant='outlined' label='Creator' fullWidth value={activityData.creator} onChange={(e) => setActivityData({ ...activityData, creator: e.target.value})}/>
                 <TextField name='title' variant='outlined' label='Title' fullWidth value={activityData.title} onChange={(e) => setActivityData({ ...activityData, title: e.target.value})}/>
                 <TextField name='message' variant='outlined' label='Message' fullWidth value={activityData.message} onChange={(e) => setActivityData({ ...activityData, message: e.target.value})}/>
-                <TextField name='tags' variant='outlined' label='Tags' fullWidth value={activityData.tags} onChange={(e) => setActivityData({ ...activityData, tags: e.target.value})}/>
+                <TextField name='tags' variant='outlined' label='Tags' fullWidth value={activityData.tags} onChange={(e) => setActivityData({ ...activityData, tags: e.target.value.split(',')})}/>
                 <div className={classes.fileInput}>
                     <FileBase type='file' multiple={false} onDone={({base64}) => setActivityData({ ...activityData, selectedFile: base64})}/>
                 </div>
