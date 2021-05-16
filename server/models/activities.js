@@ -6,6 +6,10 @@ const activitySchema = mongoose.Schema({
     message: String,
     tags: [String],
     selectedFile: String,
+    rating: {
+        type: Number,
+        default: null
+    },
     likeCount: {
         type: Number,
         default: 0

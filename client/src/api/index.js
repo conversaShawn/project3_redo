@@ -12,3 +12,4 @@ export const updateActivity =(id, updatedActivity) => axios.patch(`${url}/${id}`
 export const deleteActivity =(id) => axios.delete(`${url}/${id}`);
 // LIKES
 export const likeActivity = (id) => axios.patch(`${url}/${id}/likeActivity`);
+// RATING
