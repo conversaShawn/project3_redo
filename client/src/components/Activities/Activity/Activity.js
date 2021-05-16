@@ -48,7 +48,9 @@ const Activity = ({ activity, setCurrentId }) => {
 					{activity.message}
 				</Typography>
 			</CardContent>
-			< EnergyLevel />
+			<CardContent className={classes.ratings}>
+				< EnergyLevel/>
+			</CardContent>
 			<CardActions className={classes.cardActions}>
 				<Button 
 					size='small' 

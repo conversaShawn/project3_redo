@@ -58,3 +58,5 @@ export const likeActivity = (id) => async (dispatch) => {
 		console.log('error:', error);
 	}
 }
+
+// RATING
