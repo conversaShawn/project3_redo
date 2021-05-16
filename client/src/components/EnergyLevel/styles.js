@@ -1,10 +1,10 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles({
-//   ratings: {
-//     display: 'flex',
-//     justifyContent: 'space-between',
-//   },
+  stars: {
+    cursor: 'pointer',
+    transition: 'color 200ms'
+  },
   starInput: {
     display: 'none'
   }

@@ -7,7 +7,7 @@ import useStyles from './styles';
 const EnergyLevel = (e) => {
 	// const [rating, setRating] = useState(null)
 	const classes = useStyles();
-
+	const [rating, setRating] = useState(null);
 
 	return (
 		<div>
@@ -15,9 +15,9 @@ const EnergyLevel = (e) => {
 				const ratingValue = i + 1;
 				
 				return(
-					<label>
-						<input className={classes.starInput} type='radio' name='rating' value={ratingValue} />
-						<StarIcon className='star' size='large'/>
+					<label key={i}>
+						<input className={classes.starInput}  type='radio' name='rating' value={ratingValue} onClick={() => setRating(ratingValue)}/>
+						<StarIcon className={classes.stars} size='large'/>
 					</label>
 				)
 			})}
@@ -25,15 +25,4 @@ const EnergyLevel = (e) => {
 	)
 }
 
-// export default EnergyLevel;
-
-// const EnergyLevel = (e) => {
-	
-// 	return (
-// 	  <div>
-// 		  <Rating />
-// 	  </div>
-// 	)
-//   }
-
-  export default EnergyLevel;
+export default EnergyLevel;
