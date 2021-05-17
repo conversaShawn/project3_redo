@@ -15,9 +15,9 @@ const EnergyLevel = (e) => {
 				const ratingValue = i + 1;
 				
 				return(
-					<label key={i}>
+					<label key={i} >
 						<input className={classes.starInput}  type='radio' name='rating' value={ratingValue} onClick={() => setRating(ratingValue)}/>
-						<StarIcon className={classes.stars} size='large' color={ratingValue <= rating ? 'primary' : 'secondary'}/>
+						<StarIcon className={classes.stars} size='large' color={ratingValue <= rating ? this.setRating('yellow') : 'secondary'}/>
 					</label>
 				)
 			})}
