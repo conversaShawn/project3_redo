@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import useStyles from './styles'
 import { updateActivity, createActivity } from '../../actions/activities';
+import EnergyLevel from '../EnergyLevel/EnergyLevel';
 
 const Form = ({ currentId, setCurrentId }) => {
     const [activityData, setActivityData] = useState({
@@ -13,7 +14,8 @@ const Form = ({ currentId, setCurrentId }) => {
         title: '',
         message: '',
         tags: '',
-        selectedFile: ''
+        selectedFile: '',
+        rating: ''
     });
     const activity = useSelector((state) => currentId ? state.activities.find((a) => a._id === currentId) : null);
     const classes = useStyles();
@@ -33,7 +35,8 @@ const Form = ({ currentId, setCurrentId }) => {
             title: '',
             message: '',
             tags: '',
-            selectedFile: ''
+            selectedFile: '',
+            rating: ''
         })
     }
     
@@ -59,6 +62,7 @@ const Form = ({ currentId, setCurrentId }) => {
                 <div className={classes.fileInput}>
                     <FileBase type='file' multiple={false} onDone={({base64}) => setActivityData({ ...activityData, selectedFile: base64})}/>
                 </div>
+                <EnergyLevel name='rating' fullWidth value={activityData.rating} onChange={(e) => setActivityData({ ...activityData, rating: e.target.value})}/>
                 <Button className={classes.buttonSubmit} variant='contained' color='primary' size='large' type='submit' fullWidth>Submit</Button>
                 <Button variant='contained' color='secondary' size='small' onClick={clear} fullWidth>Clear</Button>
             </form>
