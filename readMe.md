@@ -9,14 +9,7 @@
 
 More info coming soon...
 
-![image](./client/src/images/mern.jpeg)
-## Technologies Used:
-* React
-* Express
-* MongDB
-* Node.js
-
-🛠 Built with [React](https://reactjs.org/), [Express](https://expressjs.com/), [MongoDB](https://www.mongodb.com/), [Material-UI](https://material-ui.com/), [node](https://nodejs.org/), and [javaScript][javaScript]
+🛠 Built with [React](https://reactjs.org/), [Express](https://expressjs.com/), [MongoDB](https://www.mongodb.com/), [Material-UI](https://material-ui.com/), [node](https://nodejs.org/), and [javaScript](https://www.javascript.com/)
 
 ### Expected
 - [X] Activity
