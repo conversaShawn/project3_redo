@@ -16,7 +16,7 @@ More info coming soon...
 * MongDB
 * Node.js
 
-🛠 Built with [React](https://reactjs.org/), [Express](https://expressjs.com/), [MongoDB](https://www.mongodb.com/), [Material-UI](https://material-ui.com/), [node][nodejs], and [javaScript][javaScript]
+🛠 Built with [React](https://reactjs.org/), [Express](https://expressjs.com/), [MongoDB](https://www.mongodb.com/), [Material-UI](https://material-ui.com/), [node](https://nodejs.org/), and [javaScript][javaScript]
 
 ### Expected
 - [X] Activity
