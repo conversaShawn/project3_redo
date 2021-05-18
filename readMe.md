@@ -1,4 +1,4 @@
-# BUTTERFLY BATTERY
+# Butterfly Battery
 
 - START FRONTEND: cd client/ - npm start
 - START BACKEND: cd server/ - npm start
