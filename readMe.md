@@ -9,8 +9,8 @@
 
 More info coming soon...
 
-🛠 Built with [React](https://reactjs.org/), [Express](https://expressjs.com/), [MongoDB](https://www.mongodb.com/), [Material-UI](https://material-ui.com/), [node](https://nodejs.org/), and [javaScript](https://www.javascript.com/)
-♿ WCAP Compliant
+- 🛠 Built with [React](https://reactjs.org/), [Express](https://expressjs.com/), [MongoDB](https://www.mongodb.com/), [Material-UI](https://material-ui.com/), [node](https://nodejs.org/), and [javaScript](https://www.javascript.com/)
+- ♿ WCAP Compliant
 
 ### Expected
 - [X] Activity
