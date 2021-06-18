@@ -1,6 +1,6 @@
 {
   "projectId": "pf122i",
-  "videoUploadOnPasses": true,
+  "videoUploadOnPasses": false,
   "retries": {
     "runMode": 2,
     "openMode": 3 
