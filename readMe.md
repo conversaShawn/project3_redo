@@ -14,7 +14,7 @@
 More info coming soon...
 
 - 🛠 Built with [React](https://reactjs.org/), [Express](https://expressjs.com/), [MongoDB](https://www.mongodb.com/), [Material-UI](https://material-ui.com/), [node](https://nodejs.org/), and [javaScript](https://www.javascript.com/)
-<!-- - ♿ [WCAG](https://www.w3.org/TR/WCAG21/) Compliant -->
+- ♿ [WCAG](https://www.w3.org/TR/WCAG21/) Compliant
 <!-- - 👮🏾‍♂️ [Social](https://auth0.com/learn/social-login/) Auth -->
 <!-- - 📱 Mobile responsiveness -->
 
