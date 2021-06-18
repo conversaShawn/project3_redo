@@ -9,5 +9,8 @@ workflows:
               branches:
                   only:
                     - circleci
-          start: cd client/ && npm start
+      - node/install-packages:
+          cache-path: client/
+          override-ci-command: npm install
+          start: npm start
           record: true
